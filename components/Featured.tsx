@@ -1,7 +1,7 @@
 export default function Featured() {
     return (
         <>
-            <section className="flex flex-col items-center justify-center bg-red-50 mt-[35vh]">
+            <section className="flex flex-col items-center justify-center bg-red-50 mt-[19rem]">
                 {/* <div className="w-[33%] -translate-y-60"> */}
                 <div className="w-5/6">
                     <img alt="..." className="rounded-3xl -translate-y-28" src="/chimez.jpg"></img>

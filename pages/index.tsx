@@ -4,6 +4,8 @@ import Hero from '@/components/Hero'
 import Featured from '@/components/Featured'
 import Works from '@/components/Works'
 import client from "@/sanityClient"
+import Pricing from '@/components/Pricing'
+import Contact from '@/components/Contact'
 
 // import Image from 'next/image'
 // import { Inter } from 'next/font/google'
@@ -25,7 +27,8 @@ export default function Home({ gallery }) {
         <Hero></Hero>
         <Featured></Featured>
         <Works gallery={gallery}></Works>
-        <div className="h-screen"></div>
+        <Pricing></Pricing>
+        <Contact></Contact>
       </main>
     </>
   )

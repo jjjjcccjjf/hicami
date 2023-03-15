@@ -1,5 +1,6 @@
 
 import Masonry from '@mui/lab/Masonry';
+import { Key } from 'react';
 import WorkItem from './WorkItem';
 
 export default function Works({ gallery }) {
@@ -15,7 +16,7 @@ export default function Works({ gallery }) {
                 </div>
                 <div className="w-5/6">
                     <Masonry columns={1} spacing={2}>
-                        {gallery.map((item, index) => (
+                        {gallery.map((item: any, index: Key) => (
                             <div key={index}>
                                 <WorkItem item={item}></WorkItem>
                             </div>
