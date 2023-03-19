@@ -13,12 +13,12 @@ export default function FadeInSection(props: any) {
                 }
             });
         });
-        observer.observe(domRef.current);
+        observer.observe(current);
 
         return () => {
             const current = domRef.current;
             if (!current) return;
-            observer.unobserve(domRef.current)
+            observer.unobserve(current)
         };
 
     }, []);
