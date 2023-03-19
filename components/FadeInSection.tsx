@@ -1,6 +1,6 @@
-import { useRef, useState, useEffect } from "react"
+import { useRef, useState, useEffect, PropsWithChildren } from "react"
 
-export default function FadeInSection({ props }: any) {
+export default function FadeInSection(props: PropsWithChildren) {
     const [isVisible, setVisible] = useState(false);
     const domRef = useRef<HTMLDivElement>(null);
     useEffect(() => {
