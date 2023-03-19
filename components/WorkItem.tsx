@@ -1,3 +1,4 @@
+import FadeInSection from "./FadeInSection"
 import useUrlFor from "@/hooks/useUrlFor"
 
 export default function WorkItem({ item }) {
@@ -6,12 +7,14 @@ export default function WorkItem({ item }) {
 
     return (
         <>
-            <img
-                src={imageUrl}
-                srcSet={imageUrl}
-                alt={item.alt}
-                loading="lazy"
-            />
+            <FadeInSection>
+                <img
+                    src={imageUrl}
+                    srcSet={imageUrl}
+                    alt={item.alt}
+                    loading="lazy"
+                />
+            </FadeInSection>
         </>
     )
 }

@@ -1,20 +1,31 @@
+import FadeInSection from './FadeInSection';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import EmojiEmotionsIcon from '@mui/icons-material/EmojiEmotions';
+
+import CTA from './CTA';
+
 export default function Contact() {
     return (
         <>
-            <section className="bg-red-600 flex items-center flex-col py-8 mb-8">
+            <section className="bg-red-100 flex items-center flex-col pt-2 pb-2 mb-8">
+                <div className="w-5/6 pb-8">
+                    <h2 id="contact">Contact</h2>
+                </div>
                 <div className="w-5/6 flex justify-center">
-                    <a>Let&apos;s work together ✨</a>
+                    <FadeInSection>
+                        <CTA></CTA>
+                    </FadeInSection>
                 </div>
                 <div className="w-5/6 py-8">
                     <ul className="flex flex-row justify-evenly">
-                        <li>a</li>
-                        <li>b</li>
-                        <li>c</li>
-                        <li>d</li>
+                        <li><EmojiEmotionsIcon></EmojiEmotionsIcon></li>
+                        <li><TwitterIcon></TwitterIcon></li>
+                        <li><InstagramIcon></InstagramIcon></li>
                     </ul>
                 </div>
             </section>
-            
+
         </>
     )
 }

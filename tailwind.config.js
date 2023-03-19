@@ -9,7 +9,13 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        barlow: ['var(--barlow-font)'],
+        gloria: ['var(--gloria-font)'],
+        itim: ['var(--itim-font)'],
+      },
+    },
   },
   plugins: [],
 }

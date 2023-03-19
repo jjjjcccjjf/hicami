@@ -16,30 +16,29 @@ export default function Pricing() {
 
     return (
         <>
-            <section className="bg-red-200  flex justify-content items-center flex-col py-8">
+            <section className="bg-red-100  flex justify-content items-center flex-col py-2">
                 <div className="w-5/6">
-                    <h2>Pricing</h2>
+                    <h2 id="pricing">Pricing</h2>
                 </div>
-                <div className="w-5/6 py-8">
+                <div className="w-5/6 py-6">
                     
-                    <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
+                    <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
                         <AccordionSummary
                             expandIcon={<ExpandMoreIcon />}
-                            aria-controls="panel2bh-content"
-                            id="panel2bh-header"
+                            aria-controls="panel1bh-content"
+                            id="panel1bh-header"
                         >
-                            <Typography sx={{ width: '33%', flexShrink: 0 }}>Chibi</Typography>
-                            <Typography sx={{ color: 'text.secondary' }}>
-                                Starts at $$$
-                            </Typography>
+                            <p className='w-1/3 shrink-0 text-lg'>Chibi</p>
+                            <p className='text-slate-900/50 text-lg'>Starts at $$$</p>
+                            
                         </AccordionSummary>
-                        <AccordionDetails>
+                        <AccordionDetails sx={{display: 'flex', flexDirection: 'column', gap: 2}}>
                             <img alt="..." src="/chimez.jpg"></img>
-                            <Typography>
+                            <p>
                                 Donec placerat, lectus sed mattis semper, neque lectus feugiat lectus,
                                 varius pulvinar diam eros in elit. Pellentesque convallis laoreet
                                 laoreet.
-                            </Typography>
+                            </p>
                         </AccordionDetails>
                     </Accordion>
                      
@@ -49,39 +48,37 @@ export default function Pricing() {
                             aria-controls="panel2bh-content"
                             id="panel2bh-header"
                         >
-                            <Typography sx={{ width: '33%', flexShrink: 0 }}>Chibi</Typography>
-                            <Typography sx={{ color: 'text.secondary' }}>
-                                Starts at $$$
-                            </Typography>
+                            <p className='w-1/3 shrink-0 text-lg'>Chibi</p>
+                            <p className='text-slate-900/50 text-lg'>Starts at $$$</p>
+                            
                         </AccordionSummary>
-                        <AccordionDetails>
+                        <AccordionDetails sx={{display: 'flex', flexDirection: 'column', gap: 2}}>
                             <img alt="..." src="/chimez.jpg"></img>
-                            <Typography>
+                            <p>
                                 Donec placerat, lectus sed mattis semper, neque lectus feugiat lectus,
                                 varius pulvinar diam eros in elit. Pellentesque convallis laoreet
                                 laoreet.
-                            </Typography>
+                            </p>
                         </AccordionDetails>
                     </Accordion>
 
-                    <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
+                    <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
                         <AccordionSummary
                             expandIcon={<ExpandMoreIcon />}
-                            aria-controls="panel2bh-content"
-                            id="panel2bh-header"
+                            aria-controls="panel3bh-content"
+                            id="panel3bh-header"
                         >
-                            <Typography sx={{ width: '33%', flexShrink: 0 }}>Chibi</Typography>
-                            <Typography sx={{ color: 'text.secondary' }}>
-                                Starts at $$$
-                            </Typography>
+                            <p className='w-1/3 shrink-0 text-lg'>Chibi</p>
+                            <p className='text-slate-900/50 text-lg'>Starts at $$$</p>
+                            
                         </AccordionSummary>
-                        <AccordionDetails>
+                        <AccordionDetails sx={{display: 'flex', flexDirection: 'column', gap: 2}}>
                             <img alt="..." src="/chimez.jpg"></img>
-                            <Typography>
+                            <p>
                                 Donec placerat, lectus sed mattis semper, neque lectus feugiat lectus,
                                 varius pulvinar diam eros in elit. Pellentesque convallis laoreet
                                 laoreet.
-                            </Typography>
+                            </p>
                         </AccordionDetails>
                     </Accordion>
                      

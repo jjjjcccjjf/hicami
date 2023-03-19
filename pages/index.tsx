@@ -9,7 +9,29 @@ import Contact from '@/components/Contact'
 
 // import Image from 'next/image'
 // import { Inter } from 'next/font/google'
+// import { Inter } from 'next/font/google'
+
+import { Barlow_Condensed, Gloria_Hallelujah, Itim } from 'next/font/google'
 // import styles from '@/styles/Home.module.css'
+
+const barlow = Barlow_Condensed({
+  weight: ['100', '200', '300', '400', '500', '600', '700'],
+  subsets: ['latin'],
+  variable: '--barlow-font'
+})
+
+const gloria = Gloria_Hallelujah({
+  weight: ['400'],
+  subsets: ['latin'],
+  variable: '--gloria-font'
+})
+
+
+const itim = Itim({
+  weight: ['400'],
+  subsets: ['latin'],
+  variable: '--itim-font'
+})
 
 // const inter = Inter({ subsets: ['latin'] })
 
@@ -22,7 +44,7 @@ export default function Home({ gallery }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" /> */}
       </Head>
-      <main >
+      <main className={`${barlow.variable} ${gloria.variable} ${itim.variable}`}>
         <Nav></Nav>
         <Hero></Hero>
         <Featured></Featured>
