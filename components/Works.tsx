@@ -4,7 +4,7 @@ import { Key } from 'react';
 import FadeInSection from './FadeInSection';
 import WorkItem from './WorkItem';
 
-export default function Works({ gallery }) {
+export default function Works({ gallery }: any) {
 
     return (
         <>

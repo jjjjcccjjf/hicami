@@ -33,9 +33,26 @@ const itim = Itim({
   variable: '--itim-font'
 })
 
-// const inter = Inter({ subsets: ['latin'] })
+export async function getStaticProps() {
 
-export default function Home({ gallery }) {
+  const heroSection = await client.fetch(`*[_type=="heroSection"][0]{heroHeading,heroParagraph,heroCTA}`);
+  const gallery = await client.fetch(`*[_type=="gallery"]`);
+  const pricing = await client.fetch(`*[_type=="pricing"]`);
+
+  return {
+    props: {
+      heroSection,
+      gallery,
+      pricing
+    }
+  };
+}
+
+type UnwrapPromise<T> = T extends Promise<infer U> ? U : T;
+type Props = UnwrapPromise<ReturnType<typeof getStaticProps>>['props'];
+
+
+export default function Home({ gallery }: Props) {
   return (
     <>
       <Head>
@@ -56,17 +73,3 @@ export default function Home({ gallery }) {
   )
 }
 
-export async function getStaticProps() {
-
-  const heroSection = await client.fetch(`*[_type=="heroSection"][0]{heroHeading,heroParagraph,heroCTA}`);
-  const gallery = await client.fetch(`*[_type=="gallery"]`);
-  const pricing = await client.fetch(`*[_type=="pricing"]`);
-
-  return {
-    props: {
-      heroSection,
-      gallery,
-      pricing
-    }
-  };
-}
