@@ -9,7 +9,7 @@ main {
 
 h1 {
     @apply font-barlow;
-    @apply font-semibold;
+    @apply font-bold;
 }
 
 h2 {

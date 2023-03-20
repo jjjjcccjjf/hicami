@@ -16,9 +16,9 @@ export default function Pricing() {
 
     return (
         <>
-            <section className="bg-red-100  flex justify-content items-center flex-col py-2">
-                <div className="w-5/6">
-                    <h2 id="pricing">Pricing</h2>
+            <section className="bg-red-100  flex justify-content items-center flex-col py-2 md:py-4">
+                <div className="w-5/6 md:py-4">
+                    <h2 id="pricing" className="md:text-6xl">Pricing</h2>
                 </div>
                 <div className="w-5/6 py-6">
                     
@@ -28,11 +28,20 @@ export default function Pricing() {
                             aria-controls="panel1bh-content"
                             id="panel1bh-header"
                         >
-                            <p className='w-1/3 shrink-0 text-lg'>Chibi</p>
-                            <p className='text-slate-900/50 text-lg'>Starts at $$$</p>
+                            <p className='w-1/3 shrink-0 text-lg md:text-2xl'>Vtuber</p>
+                            <p className='text-slate-900/50 text-lg md:text-2xl'>Starts at $$$</p>
                             
                         </AccordionSummary>
                         <AccordionDetails sx={{display: 'flex', flexDirection: 'column', gap: 2}}>
+                            <p className="text-xl">Head only</p>
+                            <img alt="..." src="/chimez.jpg"></img>
+                            <p>
+                                Donec placerat, lectus sed mattis semper, neque lectus feugiat lectus,
+                                varius pulvinar diam eros in elit. Pellentesque convallis laoreet
+                                laoreet.
+                            </p>
+
+                            <p className="text-xl">With Body</p>
                             <img alt="..." src="/chimez.jpg"></img>
                             <p>
                                 Donec placerat, lectus sed mattis semper, neque lectus feugiat lectus,
@@ -48,8 +57,8 @@ export default function Pricing() {
                             aria-controls="panel2bh-content"
                             id="panel2bh-header"
                         >
-                            <p className='w-1/3 shrink-0 text-lg'>Chibi</p>
-                            <p className='text-slate-900/50 text-lg'>Starts at $$$</p>
+                            <p className='w-1/3 shrink-0 text-lg md:text-2xl'>Chibi</p>
+                            <p className='text-slate-900/50 text-lg md:text-2xl'>Starts at $$$</p>
                             
                         </AccordionSummary>
                         <AccordionDetails sx={{display: 'flex', flexDirection: 'column', gap: 2}}>
@@ -68,8 +77,8 @@ export default function Pricing() {
                             aria-controls="panel3bh-content"
                             id="panel3bh-header"
                         >
-                            <p className='w-1/3 shrink-0 text-lg'>Chibi</p>
-                            <p className='text-slate-900/50 text-lg'>Starts at $$$</p>
+                            <p className='w-1/3 shrink-0 text-lg md:text-2xl'>Chibi</p>
+                            <p className='text-slate-900/50 text-lg md:text-2xl'>Starts at $$$</p>
                             
                         </AccordionSummary>
                         <AccordionDetails sx={{display: 'flex', flexDirection: 'column', gap: 2}}>
