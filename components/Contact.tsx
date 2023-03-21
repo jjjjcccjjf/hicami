@@ -10,7 +10,7 @@ export default function Contact() {
         <>
             <section className="bg-red-100 flex items-center flex-col pt-2 pb-2 mb-8 md:mb-12">
                 <div className="w-5/6 pb-8 md:pb-10">
-                    <h2 id="contact" className="md:text-6xl">Contact</h2>
+                    <h2 id="contact" className="md:text-6xl lg:text-7xl">Contact</h2>
                 </div>
                 <div className="w-5/6 flex justify-center md:text-2xl">
                     <FadeInSection>

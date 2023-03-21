@@ -14,14 +14,23 @@ export default function Works({ gallery }: any) {
 
     useEffect(() => {
         // set the initial number of items based on default window width
-        if (window.innerWidth >= 768) {
+        if (window.innerWidth >= 1280) {
+            setGalleryCols(4)
+        } else if (window.innerWidth >= 1024) {
+            setGalleryCols(3)
+        } else if (window.innerWidth >= 768) {
             setGalleryCols(2)
         } else {
             setGalleryCols(1);
         }
 
         function handleWindowResize() {
-            if (window.innerWidth >= 768) {
+            if (window.innerWidth >= 1280) {
+                setGalleryCols(4)
+            } else if (window.innerWidth >= 1024) {
+                setGalleryCols(3)
+            }
+            else if (window.innerWidth >= 768) {
                 setGalleryCols(2)
             } else {
                 setGalleryCols(1);
@@ -39,11 +48,11 @@ export default function Works({ gallery }: any) {
         <>
             <section className="bg-red-100 flex  items-center flex-col ">
                 <div className="w-5/6 pt-4">
-                    <h2 id="works" className="md:text-6xl">Works</h2>
+                    <h2 id="works" className="md:text-6xl lg:text-7xl">Works</h2>
                 </div>
-                <div className="w-full pt-8 pb-4">
+                <div className="w-full pt-8 pb-4 xl:px-24 xl:pb-8">
                     <FadeInSection>
-                        <img className="" alt="..." src="/mirror.png"></img>
+                        <img className="xl:rounded-3xl" alt="..." src="/mirror.png"></img>
                     </FadeInSection>
                 </div>
                 <div className="w-full pb-4 flex justify-center">
