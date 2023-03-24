@@ -2,28 +2,45 @@ import FadeInSection from './FadeInSection';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import EmojiEmotionsIcon from '@mui/icons-material/EmojiEmotions';
+import Tilt from 'react-vanilla-tilt'
 
 import CTA from './CTA';
 
 export default function Contact() {
     return (
         <>
-            <section className="bg-red-100 flex items-center flex-col pt-2 pb-2 mb-8 md:mb-12">
-                <div className="w-5/6 pb-8 md:pb-10">
-                    <h2 id="contact" className="md:text-6xl lg:text-7xl">Contact</h2>
+            <section className="bg-red-100 flex items-center flex-col pb-8 mb-8 md:mb-12 2xl:mb-20">
+                <div className="w-5/6 pb-8 md:pb-10 ">
+                    <h2 id="contact" className="md:text-6xl lg:text-7xl 2xl:text-6xl">Contact</h2>
                 </div>
-                <div className="w-5/6 flex justify-center md:text-2xl">
-                    <FadeInSection>
-                        <CTA></CTA>
-                    </FadeInSection>
+
+                <div className=" w-5/6 rounded-xl xl:w-1/2 2xl:w-1/3">
+                    <Tilt options={{ glare: false, "glare-prerender": false, "max-glare": 0, }} style={{ background: 'none', 'box-shadow': 'none' }}>
+                        <div className="py-3 px-4">
+                            <ul className="flex justify-between md:text-2xl">
+                                <li>Artist</li>
+                                <li>Illustrator</li>
+                            </ul>
+                        </div>
+                        <div className=" flex justify-center py-4 md:text-2xl">
+                            <CTA></CTA>
+                        </div>
+                        <div className="py-4">
+                            <ul className="flex flex-row justify-center gap-4 items-center">
+                                <li className="h-8 md:h-12"><EmojiEmotionsIcon sx={{ height: '100%', width: '100%' }}></EmojiEmotionsIcon></li>
+                                <li className="h-8 md:h-12"><TwitterIcon sx={{ height: '100%', width: '100%' }}></TwitterIcon></li>
+                                <li className="h-8 md:h-12"><InstagramIcon sx={{ height: '100%', width: '100%' }}></InstagramIcon></li>
+                            </ul>
+                        </div>
+                        <div className="py-3 px-4">
+                            <ul className="flex justify-between md:text-2xl">
+                                <li>Something</li>
+                                <li>Else</li>
+                            </ul>
+                        </div>
+                    </Tilt>
                 </div>
-                <div className="w-5/6 py-8">
-                    <ul className="flex flex-row justify-evenly">
-                        <li className="h-8 md:h-14"><EmojiEmotionsIcon sx={{ height: '100%', width: '100%' }}></EmojiEmotionsIcon></li>
-                        <li className="h-8 md:h-14"><TwitterIcon sx={{ height: '100%', width: '100%' }}></TwitterIcon></li>
-                        <li className="h-8 md:h-14"><InstagramIcon sx={{ height: '100%', width: '100%' }}></InstagramIcon></li>
-                    </ul>
-                </div>
+
             </section>
 
         </>

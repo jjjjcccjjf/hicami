@@ -18,7 +18,7 @@ export default function Pricing() {
         <>
             <section className="bg-red-100  flex justify-content items-center flex-col py-2 md:py-4">
                 <div className="w-5/6 md:py-4">
-                    <h2 id="pricing" className="md:text-6xl lg:text-7xl">Pricing</h2>
+                    <h2 id="pricing" className="md:text-6xl lg:text-7xl 2xl:text-6xl">Pricing</h2>
                 </div>
                 <div className="w-5/6 py-6">
                     
