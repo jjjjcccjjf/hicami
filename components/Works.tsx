@@ -48,11 +48,11 @@ export default function Works({ gallery }: any) {
         <>
             <section className="bg-red-100 flex  items-center flex-col ">
                 <div className="w-5/6 pt-4">
-                    <h2 id="works" className="md:text-6xl lg:text-7xl 2xl:text-6xl">Works</h2>
+                    <h2 id="works" className="md:text-6xl lg:text-7xl xl:text-6xl 2xl:text-6xl">Works</h2>
                 </div>
                 <div className="w-full pt-8 pb-4 xl:px-24 xl:pb-8 2xl:px-36 2xl:pb-4">
                     <FadeInSection>
-                        <img className="xl:rounded-3xl 2xl:w-full 2xl:h-full" alt="..." src="/mirror.png"></img>
+                        <img className="xl:rounded-3xl lg:w-full lg:h-full 2xl:w-full 2xl:h-full" alt="..." src="/mirror.png"></img>
                     </FadeInSection>
                 </div>
                 <div className="w-full pb-4 flex justify-center">

@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { SyntheticEvent, useState } from 'react';
 
-export default function Pricing() {
+export default function Pricing({ pricing }: any) { //todo fix this
 
     const [expanded, setExpanded] = useState<string | false>(false);
 
@@ -18,10 +18,10 @@ export default function Pricing() {
         <>
             <section className="bg-red-100  flex justify-content items-center flex-col py-2 md:py-4">
                 <div className="w-5/6 md:py-4">
-                    <h2 id="pricing" className="md:text-6xl lg:text-7xl 2xl:text-6xl">Pricing</h2>
+                    <h2 id="pricing" className="md:text-6xl lg:text-7xl xl:text-6xl 2xl:text-6xl">Pricing</h2>
                 </div>
                 <div className="w-5/6 py-6">
-                    
+
                     <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
                         <AccordionSummary
                             expandIcon={<ExpandMoreIcon />}
@@ -30,9 +30,9 @@ export default function Pricing() {
                         >
                             <p className='w-1/3 shrink-0 text-lg md:text-2xl'>Vtuber</p>
                             <p className='text-slate-900/50 text-lg md:text-2xl'>Starts at $$$</p>
-                            
+
                         </AccordionSummary>
-                        <AccordionDetails sx={{display: 'flex', flexDirection: 'column', gap: 2}}>
+                        <AccordionDetails sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
                             <p className="text-xl">Head only</p>
                             <img alt="..." src="/chimez.jpg"></img>
                             <p>
@@ -50,7 +50,7 @@ export default function Pricing() {
                             </p>
                         </AccordionDetails>
                     </Accordion>
-                     
+
                     <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
                         <AccordionSummary
                             expandIcon={<ExpandMoreIcon />}
@@ -59,9 +59,9 @@ export default function Pricing() {
                         >
                             <p className='w-1/3 shrink-0 text-lg md:text-2xl'>Chibi</p>
                             <p className='text-slate-900/50 text-lg md:text-2xl'>Starts at $$$</p>
-                            
+
                         </AccordionSummary>
-                        <AccordionDetails sx={{display: 'flex', flexDirection: 'column', gap: 2}}>
+                        <AccordionDetails sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
                             <img alt="..." src="/chimez.jpg"></img>
                             <p>
                                 Donec placerat, lectus sed mattis semper, neque lectus feugiat lectus,
@@ -79,9 +79,9 @@ export default function Pricing() {
                         >
                             <p className='w-1/3 shrink-0 text-lg md:text-2xl'>Chibi</p>
                             <p className='text-slate-900/50 text-lg md:text-2xl'>Starts at $$$</p>
-                            
+
                         </AccordionSummary>
-                        <AccordionDetails sx={{display: 'flex', flexDirection: 'column', gap: 2}}>
+                        <AccordionDetails sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
                             <img alt="..." src="/chimez.jpg"></img>
                             <p>
                                 Donec placerat, lectus sed mattis semper, neque lectus feugiat lectus,
@@ -90,7 +90,7 @@ export default function Pricing() {
                             </p>
                         </AccordionDetails>
                     </Accordion>
-                     
+
                 </div>
             </section>
         </>

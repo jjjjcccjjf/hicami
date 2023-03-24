@@ -35,13 +35,13 @@ const itim = Itim({
 
 export async function getStaticProps() {
 
-  const heroSection = await client.fetch(`*[_type=="heroSection"][0]{heroHeading,heroParagraph,heroCTA}`);
+  const featuredSection = await client.fetch(`*[_type=="featuredSection"][0]{featuredParagraph}`);
   const gallery = await client.fetch(`*[_type=="gallery"]`);
   const pricing = await client.fetch(`*[_type=="pricing"]`);
 
   return {
     props: {
-      heroSection,
+      featuredSection,
       gallery,
       pricing
     }
@@ -52,7 +52,7 @@ type UnwrapPromise<T> = T extends Promise<infer U> ? U : T;
 type Props = UnwrapPromise<ReturnType<typeof getStaticProps>>['props'];
 
 
-export default function Home({ gallery }: Props) {
+export default function Home({ featuredSection, gallery, pricing }: Props) {
   return (
     <>
       <Head>
@@ -62,11 +62,13 @@ export default function Home({ gallery }: Props) {
         <link rel="icon" href="/favicon.ico" /> */}
       </Head>
       <main className={`${barlow.variable} ${gloria.variable} ${itim.variable}`}>
+        {/* home nav */}
+        <span id="home" className="absolute top-0 left-0"></span>
         <Nav></Nav>
         <Hero></Hero>
-        <Featured></Featured>
+        <Featured featuredSection={featuredSection}></Featured>
         <Works gallery={gallery}></Works>
-        <Pricing></Pricing>
+        <Pricing pricing={pricing}></Pricing>
         <Contact></Contact>
       </main>
     </>
