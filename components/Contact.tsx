@@ -15,7 +15,7 @@ export default function Contact() {
                 </div>
 
                 <div className=" w-5/6 rounded-xl lg:w-2/3 xl:w-1/2 2xl:w-1/3">
-                    <Tilt options={{ glare: false, "glare-prerender": false, "max-glare": 0, }} style={{ background: 'none', 'box-shadow': 'none' }}>
+                    <Tilt options={{ glare: false, "glare-prerender": false, "max-glare": 0, }} style={{ background: 'none', boxShadow: 'none' }}>
                         <div className="py-3 px-4">
                             <ul className="flex justify-between md:text-2xl">
                                 <li>Artist</li>

@@ -46,7 +46,7 @@ export default function Works({ gallery }: any) {
 
     return (
         <>
-            <section className="bg-red-100 flex  items-center flex-col ">
+            <section className="bg-red-100 flex items-center flex-col ">
                 <div className="w-5/6 pt-4">
                     <h2 id="works" className="md:text-6xl lg:text-7xl xl:text-6xl 2xl:text-6xl">Works</h2>
                 </div>
@@ -62,7 +62,9 @@ export default function Works({ gallery }: any) {
                     <Masonry ref={masonryRef} columns={galleryCols} spacing={2} sx={{ width: "auto" }}>
                         {gallery.map((item: any, index: Key) => (
                             <div key={index}>
-                                <WorkItem item={item}></WorkItem>
+                                <FadeInSection>
+                                    <WorkItem item={item}></WorkItem>
+                                </FadeInSection>
                             </div>
                         ))}
                     </Masonry>

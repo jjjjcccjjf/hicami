@@ -1,12 +1,13 @@
+import { Key } from 'react';
 import Accordion from '@mui/material/Accordion';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
-import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { SyntheticEvent, useState } from 'react';
+import AccordionContent from './AccordionContent';
+import WorkItem from './WorkItem';
 
 export default function Pricing({ pricing }: any) { //todo fix this
-
     const [expanded, setExpanded] = useState<string | false>(false);
 
     const handleChange =
@@ -22,7 +23,34 @@ export default function Pricing({ pricing }: any) { //todo fix this
                 </div>
                 <div className="w-5/6 py-6">
 
-                    <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+                    {pricing.map((item: any, key: Key) => {
+                        return (
+                            <Accordion key={key} expanded={expanded === `panel${key}`} onChange={handleChange(`panel${key}`)}>
+                                <AccordionSummary
+                                    expandIcon={<ExpandMoreIcon />}
+                                    aria-controls="panel1bh-content"
+                                    id="panel1bh-header"
+                                >
+                                    <p className='w-1/3 shrink-0 text-lg md:text-2xl'>{item.heading}</p>
+                                    <p className='text-slate-900/50 text-lg md:text-2xl'>{item.price}</p>
+
+                                </AccordionSummary>
+                                <AccordionDetails sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+                                    {item.subSections.map((subItem: any, subKey: Key) => {
+                                        return (<div key={subKey}>
+                                            <h3>{subItem.subHeading}</h3>
+                                            <WorkItem item={subItem}></WorkItem>
+                                            <p>{subItem.description}</p>
+                                        </div>
+                                        )
+                                    })}
+
+                                </AccordionDetails>
+                            </Accordion>
+                        )
+                    })}
+
+                    {/* <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
                         <AccordionSummary
                             expandIcon={<ExpandMoreIcon />}
                             aria-controls="panel1bh-content"
@@ -89,7 +117,7 @@ export default function Pricing({ pricing }: any) { //todo fix this
                                 laoreet.
                             </p>
                         </AccordionDetails>
-                    </Accordion>
+                    </Accordion> */}
 
                 </div>
             </section>

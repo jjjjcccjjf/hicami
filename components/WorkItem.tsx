@@ -7,14 +7,12 @@ export default function WorkItem({ item }: any) {
 
     return (
         <>
-            <FadeInSection>
-                <img
-                    src={imageUrl}
-                    srcSet={imageUrl}
-                    alt={item.alt}
-                    loading="lazy"
-                />
-            </FadeInSection>
+            <img
+                src={imageUrl}
+                srcSet={imageUrl}
+                alt={item.alt}
+                loading="lazy"
+            />
         </>
     )
 }
