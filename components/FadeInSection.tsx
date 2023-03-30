@@ -16,7 +16,7 @@ export default function FadeInSection(props: PropsWithChildren) {
         observer.observe(current);
 
         return () => {
-            const current = domRef.current;
+            // const current = domRef.current;
             if (!current) return;
             observer.unobserve(current)
         };
