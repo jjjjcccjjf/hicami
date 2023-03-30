@@ -6,6 +6,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { SyntheticEvent, useState } from 'react';
 import AccordionContent from './AccordionContent';
 import WorkItem from './WorkItem';
+import FadeInSection from './FadeInSection';
 
 export default function Pricing({ pricing }: any) { //todo fix this
     const [expanded, setExpanded] = useState<string | false>(false);
@@ -25,28 +26,30 @@ export default function Pricing({ pricing }: any) { //todo fix this
 
                     {pricing.map((item: any, key: Key) => {
                         return (
-                            <Accordion key={key} expanded={expanded === `panel${key}`} onChange={handleChange(`panel${key}`)} >
-                                <AccordionSummary
-                                    expandIcon={<ExpandMoreIcon />}
-                                    aria-controls="panel1bh-content"
-                                    id="panel1bh-header"
-                                >
-                                    <p className='w-1/3  shrink-0 text-lg  md:text-2xl'>{item.heading}</p>
-                                    <p className='text-slate-900/50 text-lg  md:text-2xl w-full text-right'>{item.price}</p>
+                            <FadeInSection key={key}>
+                                <Accordion  expanded={expanded === `panel${key}`} onChange={handleChange(`panel${key}`)} >
+                                    <AccordionSummary
+                                        expandIcon={<ExpandMoreIcon />}
+                                        aria-controls="panel1bh-content"
+                                        id="panel1bh-header"
+                                    >
+                                        <p className='w-1/3  shrink-0 text-lg  md:text-2xl'>{item.heading}</p>
+                                        <p className='text-slate-900/50 text-lg  md:text-2xl w-full text-right'>{item.price}</p>
 
-                                </AccordionSummary>
-                                <AccordionDetails sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-                                    {item.subSections.map((subItem: any, subKey: Key) => {
-                                        return (<div key={subKey} className="flex flex-col items-center m-auto gap-4 lg:w-2/3 2xl:w-1/2">
-                                            <h3 className="text-lg md:text-2xl">{subItem.subHeading}</h3>
-                                            <WorkItem item={subItem} className="md:w-1/2 lg:w-2/3 2xl:w-1/2"></WorkItem>
-                                            <p className="xl:text-lg">{subItem.description} Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea ipsum iure quod deleniti. Molestiae possimus recusandae quod soluta repellendus culpa sapiente. Dolorem cupiditate, perspiciatis sequi nesciunt consequatur unde mollitia quos.</p>
-                                        </div>
-                                        )
-                                    })}
+                                    </AccordionSummary>
+                                    <AccordionDetails sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+                                        {item.subSections.map((subItem: any, subKey: Key) => {
+                                            return (<div key={subKey} className="flex flex-col items-center m-auto gap-4 lg:w-2/3 2xl:w-1/2">
+                                                <h3 className="text-lg md:text-2xl">{subItem.subHeading}</h3>
+                                                <WorkItem item={subItem} className="md:w-1/2 lg:w-2/3 2xl:w-1/2"></WorkItem>
+                                                <p className="xl:text-lg">{subItem.description} Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea ipsum iure quod deleniti. Molestiae possimus recusandae quod soluta repellendus culpa sapiente. Dolorem cupiditate, perspiciatis sequi nesciunt consequatur unde mollitia quos.</p>
+                                            </div>
+                                            )
+                                        })}
 
-                                </AccordionDetails>
-                            </Accordion>
+                                    </AccordionDetails>
+                                </Accordion>
+                            </FadeInSection>
                         )
                     })}
 

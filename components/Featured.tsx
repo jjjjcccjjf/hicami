@@ -25,7 +25,15 @@ export default function Featured({ featuredSection }: FeaturedProps) {
                         <CTA></CTA>
                     </FadeInSection>
                 </div>
-                <div className="absolute left-0 -rotate-12 scale-[2]">
+                <div className="hidden 2xl:block absolute right-0 translate-x-28 -rotate-12 ">
+                    <FadeInSection>
+                        <img src="/treeslate.png" alt="..." className="h-[50rem]"></img>
+                    </FadeInSection>
+                </div>
+                <div className="hidden 2xl:block absolute left-0 -translate-x-28 rotate-12 -scale-x-100">
+                    <FadeInSection>
+                        <img src="/treeslate.png" alt="..." className="h-[50rem]"></img>
+                    </FadeInSection>
                 </div>
             </section>
         </>

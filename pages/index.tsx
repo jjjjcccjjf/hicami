@@ -61,9 +61,9 @@ export default function Home({ featuredSection, gallery, pricing }: Props) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" /> */}
       </Head>
-      <main className={`${barlow.variable} ${gloria.variable} ${itim.variable}`}>
+      <main className={`${barlow.variable} ${gloria.variable} ${itim.variable} overflow-hidden`}>
         {/* home nav */}
-        <span id="home" className="absolute top-0 left-0"></span>
+        <span id="home" className="absolute top-0"></span>
         <Nav></Nav>
         <Hero></Hero>
         <Featured featuredSection={featuredSection}></Featured>
