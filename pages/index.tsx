@@ -44,7 +44,8 @@ export async function getStaticProps() {
       featuredSection,
       gallery,
       pricing
-    }
+    },
+    revalidate: 60,
   };
 }
 
